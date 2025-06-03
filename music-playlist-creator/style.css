@@ -91,3 +91,19 @@ header, footer{
     float:left;
     margin-right: 12px;
 }
+
+@media only screen and (max-width: 1000px) {
+    .playlist-card{
+        width: 15%;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .playlist-card{
+        width: 25%;
+    }
+}
+@media only screen and (max-width: 400px) {
+    .playlist-card{
+        width: 40%;
+    }
+}
