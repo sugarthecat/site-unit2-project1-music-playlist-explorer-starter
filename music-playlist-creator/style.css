@@ -4,3 +4,23 @@ body {
     padding: 0;
     background-color: #f8f8f8;
 }
+.playlist-cards{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.playlist-card{
+    width: 12%;
+    margin: 1% 1%;
+    aspect-ratio: 3 / 2;
+    padding: 15px;
+    outline: 5px solid gray;
+    border-radius: 5%;
+}
+.playlist-card img{
+    width: 80%;
+    aspect-ratio: 6 / 5;
+    display: block;
+    margin: auto;
+    object-fit: cover;
+}
