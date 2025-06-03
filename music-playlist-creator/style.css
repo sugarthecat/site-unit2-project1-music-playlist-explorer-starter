@@ -4,6 +4,11 @@ body {
     padding: 0;
     background-color: #f8f8f8;
 }
+header, footer{
+    padding: 40px;
+    background-color: rgb(80,80,80);
+    color:white;
+}
 .playlist-cards{
     display: flex;
     justify-content: space-evenly;
@@ -14,13 +19,75 @@ body {
     margin: 1% 1%;
     aspect-ratio: 3 / 2;
     padding: 15px;
-    outline: 5px solid gray;
+    outline: 8px solid gray;
     border-radius: 5%;
+    cursor: pointer;
+    color:black;
+    box-shadow: 15px 15px;
+    transition-duration: 500ms;
+}
+.playlist-card:hover{
+    box-shadow: 0px 0px;
+}
+.playlist-card:hover img{
+    outline: none;
 }
 .playlist-card img{
     width: 80%;
-    aspect-ratio: 6 / 5;
+    aspect-ratio: 1 / 1;
     display: block;
     margin: auto;
     object-fit: cover;
+    outline: 5px solid gray;
+    border-radius: 5%;
+    transition-duration: 500ms;
+}
+.modal-overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    background-color: rgba(100,100,100,0.8);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.modal-content{
+    background-color: white;
+    width: 60%;
+    border-radius: 5%;
+    aspect-ratio: 3 / 2;
+    cursor:default;
+}
+.songs-list{
+    display: flex;
+    flex-direction: column;
+    height: 50%;
+    overflow: scroll;
+    border-radius: 3%;
+    background-color: rgb(240,240,240);
+    margin: 0% 2%;
+}
+.songs-list div{
+    padding: 5px;
+    height: 25%;
+}
+.songs-list div img{
+    height: 100%;
+    border: 5%;
+    border-radius: 8%;
+    float:left;
+    margin-right: 12px;
+}
+.playlist-info{
+    height: 40%;
+    padding: 10px;
+}
+.playlist-info img{
+    height: 100%;
+    border-radius: 8%;
+    float:left;
+    margin-right: 12px;
 }

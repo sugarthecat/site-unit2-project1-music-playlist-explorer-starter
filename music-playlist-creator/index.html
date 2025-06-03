@@ -1,63 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>Music Playlist Explorer</title>
-    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-    
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <header>
-        <h1>Music Playlist Explorer</h1>
+      <h1>Music Playlist Explorer</h1>
+      <p>By T.J. Nickerson</p>
+      <nav></nav>
     </header>
 
-    <main> 
-        <section class="playlist-cards">
-            <div class="playlist-card">
-                <img src="assets/default.jpg"/>
-                <h3>Playlist title</h3>
-                <p>Creator Name</p>
-            </div>
-            <div class="playlist-card">
-                <img src="assets/default.jpg"/>
-                <h3>Playlist title</h3>
-                <p>Creator Name</p>
-            </div>
-            <div class="playlist-card">
-                <img src="assets/default.jpg"/>
-                <h3>Playlist title</h3>
-                <p>Creator Name</p>
-            </div>
-            <div class="playlist-card">
-                <img src="assets/default.jpg"/>
-                <h3>Playlist title</h3>
-                <p>Creator Name</p>
-            </div>
-            <div class="playlist-card">
-                <img src="assets/default.jpg"/>
-                <h3>Playlist title</h3>
-                <p>Creator Name</p>
-            </div>
-            <div class="playlist-card">
-                <img src="assets/default.jpg"/>
-                <h3>Playlist title</h3>
-                <p>Creator Name</p>
-            </div>
-            <div class="playlist-card">
-                <img src="assets/default.jpg"/>
-                <h3>Playlist title</h3>
-                <p>Creator Name</p>
-            </div>
-        </section>
+    <main>
+      <section class="playlist-cards">
+        <div class="playlist-card">
+          <img src="assets/img/playlist.png" />
+          <h3>Playlist title</h3>
+          <p>Creator Name</p>
+        </div>
+        <div class="playlist-card">
+          <img src="assets/img/playlist.png" />
+          <h3>Playlist title</h3>
+          <p>Creator Name</p>
+        </div>
+        <div class="playlist-card">
+          <img src="assets/img/playlist.png" />
+          <h3>Playlist title</h3>
+          <p>Creator Name</p>
+        </div>
+        <div class="playlist-card">
+          <img src="assets/img/playlist.png" />
+          <h3>Playlist title</h3>
+          <p>Creator Name</p>
+        </div>
+        <div class="playlist-card">
+          <img src="assets/img/playlist.png" />
+          <h3>Playlist title</h3>
+          <p>Creator Name</p>
+        </div>
+        <div class="playlist-card">
+          <img src="assets/img/playlist.png" />
+          <h3>Playlist title</h3>
+          <p>Creator Name</p>
+        </div>
+        <div class="playlist-card">
+          <img src="assets/img/playlist.png" />
+          <h3>Playlist title</h3>
+          <p>Creator Name</p>
+          <p></p>
+        </div>
+      </section>
     </main>
 
     <footer>
-        <!-- Your footer content here -->
+      <!-- Your footer content here -->
     </footer>
+    <div
+      class="modal-overlay"
+      onclick="hideModalOverlay()"
+      id="modal-overlay"
+      hidden
+    >
+      <div
+        class="modal-content"
+        id="modal-content"
+        onclick="modalContentClicked(event)"
+      >
+        <div class="playlist-info">
+          <img src="assets/img/playlist.png" />
+          <h2>Playlist Name</h2>
+          <p>Author Name</p>
+        </div>
+        <section class="songs-list">
+          <div>
+            <img src="assets/img/song.png" />
+            <p><b>Song</b></p>
+            <p>Artist name</p>
+          </div>
+          <div>
+            <img src="assets/img/song.png" />
+            <p><b>Song</b></p>
+            <p>Artist name</p>
+          </div>
+          <div>
+            <img src="assets/img/song.png" />
+            <p><b>Song</b></p>
+            <p>Artist name</p>
+          </div>
+          <div>
+            <img src="assets/img/song.png" />
+            <p><b>Song</b></p>
+            <p>Artist name</p>
+          </div>
+          <div>
+            <img src="assets/img/song.png" />
+            <p><b>Song</b></p>
+            <p>Artist name</p>
+          </div>
+        </section>
+      </div>
+    </div>
     <script src="data/data.js"></script>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
