@@ -1,7 +1,8 @@
 class Playlist {
-  constructor(title, creator) {
+  constructor(title, creator, likes = 0) {
     this.title = title;
     this.creator = creator;
+    this.likes = likes;
     this.dateCreated = new Date();
     this.songs = [];
   }
@@ -27,6 +28,7 @@ class Playlist {
   focusPlaylist() {
     document.getElementById("modal-overlay").style.display = "flex";
     document.getElementById("playlist-name").innerText = this.title;
+    document.getElementById("playlist-duration").innerText = `${Math.floor(this.getTotalLength()/60)}:${this.getTotalLength()%60}${this.getTotalLength()%60 <10 ? 0 : ""}, ${this.songs.length} songs`;
     document.getElementById(
       "playlist-creator-name"
     ).innerText = `Created by ${this.creator}`;
@@ -36,7 +38,8 @@ class Playlist {
         .getElementById("songs-list")
         .appendChild(this.getSongCard(this.songs[i]));
     }
-    document.getElementById('playlist-cover').src = this.getPlaylistCoverImage();
+    document.getElementById("playlist-cover").src =
+      this.getPlaylistCoverImage();
     let ref = this;
     document.getElementById("shuffleButton").onclick = function () {
       ref.shuffleSongs();
@@ -49,21 +52,41 @@ class Playlist {
       return `assets/img/${this.songs[0].albumcover}`;
     }
   }
+  getTotalLength(){
+    let secLength = 0;
+    for(let i = 0; i<this.songs.length; i++){
+        let durationParts = this.songs[i].duration.split(":");
+        secLength += parseInt(durationParts[0])*60
+        secLength += parseInt(durationParts[1])
+    }
+    return secLength
+  }
   getSongCard(song) {
     let card = document.createElement("div");
+    //album cover
     let image = document.createElement("img");
     image.src = `assets/img/${song.albumcover}`;
     card.appendChild(image);
+    //song info (title, album, artist)
+    let centerSection = document.createElement("div");
     let songTitle = document.createElement("p");
     songTitle.innerText = song.title;
     songTitle.className = "song-title";
-    card.append(songTitle);
+    centerSection.appendChild(songTitle);
     let songAlbum = document.createElement("p");
     songAlbum.innerText = song.album;
-    card.append(songAlbum);
+    centerSection.appendChild(songAlbum);
     let songArtist = document.createElement("p");
     songArtist.innerText = song.artist;
-    card.append(songArtist);
+    centerSection.appendChild(songArtist);
+    card.appendChild(centerSection);
+    //duration
+    let rightSection = document.createElement("div");
+    let songDuration = document.createElement("p");
+    songDuration.innerText = song.duration;
+    rightSection.appendChild(songDuration)
+    rightSection.className = "song-right-section"
+    card.appendChild(rightSection);
     return card;
   }
   shuffleSongs() {
@@ -72,7 +95,7 @@ class Playlist {
     let indexes = [];
     while (indexes.length < this.songs.length) {
       indexes.splice(
-        Math.floor(Math.random() * indexes.length),
+        Math.floor(Math.random() * (1 + indexes.length)),
         0,
         indexes.length
       );

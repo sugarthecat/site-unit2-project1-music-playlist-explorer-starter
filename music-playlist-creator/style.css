@@ -15,13 +15,13 @@ footer {
   justify-content: space-evenly;
   flex-wrap: wrap;
 }
-.song-title{
-    font-weight: bolder;
+.song-title {
+  font-weight: bolder;
 }
 .playlist-card {
   width: 12%;
   margin: 1% 1%;
-  aspect-ratio: 3 / 2;
+  aspect-ratio: 2 / 1;
   padding: 15px;
   border-radius: 5%;
   cursor: pointer;
@@ -32,6 +32,9 @@ footer {
 }
 .playlist-card:hover {
   box-shadow: 18px 18px;
+}
+select{
+    padding: 8px;
 }
 .playlist-card:hover img {
   outline: 5px solid gray;
@@ -45,6 +48,10 @@ footer {
   outline: none;
   border-radius: 5%;
   transition-duration: 500ms;
+}
+.playlist-like-counter{
+    position:relative;
+    bottom:0px;
 }
 .modal-overlay {
   position: fixed;
@@ -65,6 +72,21 @@ footer {
   aspect-ratio: 1 / 1;
   cursor: default;
 }
+#playlist-name {
+  font-size: larger;
+}
+button {
+  padding: 12px;
+  background-color: rgb(80, 80, 200);
+  color: white;
+  border-radius: 5%;
+  outline: none;
+  border: none;
+  transition: background-color 500ms;
+}
+button:hover {
+  background-color: rgb(150, 150, 255);
+}
 .songs-list {
   display: flex;
   flex-direction: column;
@@ -74,19 +96,26 @@ footer {
   background-color: rgb(240, 240, 240);
   margin: 0% 2%;
 }
-.songs-list div {
+.songs-list > div {
   padding: 8px;
   height: 25%;
+  display: flex;
+}
+.song-right-section{
+    font-family: monospace;
+    display: flex;
+    padding: 40px;
+    margin-left:auto;
+    align-items: center;
 }
 .songs-list div p {
-  margin-top:0px;
-  margin-bottom:0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
 .songs-list div img {
   height: 100%;
   border: 5%;
   border-radius: 8%;
-  float: left;
   margin-right: 12px;
 }
 .playlist-info {
@@ -112,15 +141,29 @@ footer {
     margin-bottom: 20px;
     box-shadow: 12px 12px;
   }
-  
-.songs-list div {
-  padding: 8px;
-
-  height:40%;
+.song-right-section{
+    padding:20px
 }
+
+  .songs-list div {
+    padding: 8px;
+    height: 40%;
+  }
 }
 @media only screen and (max-width: 450px) {
   .playlist-card {
     width: 30%;
   }
+  p {
+    font-size: small;
+  }
+}
+@media only screen and (max-width: 400px) {
+  p {
+    font-size: 10px;
+  }
+.song-right-section{
+    padding:10px
+}
+
 }

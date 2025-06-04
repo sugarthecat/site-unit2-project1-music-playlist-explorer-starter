@@ -13,6 +13,13 @@
     <header>
       <h1>Music Playlist Explorer</h1>
       <p>By T.J. Nickerson</p>
+      <p>Sort By <select onchange="sortPlaylists()" id="playlist-sort-type">
+        <option value="a2z">Alphabetical (A-Z)</option>
+        <option value="z2a">Alphabetical (Z-A)</option>
+        <option value="len">Length</option>
+        <option value="likes">Likes</option>
+        <option value="songcount">Song Count</option>
+      </select></p>
       <nav></nav>
     </header>
 
@@ -38,33 +45,11 @@
           <img src="assets/img/playlist.png" id="playlist-cover"/>
             <p><b id="playlist-name">Playlist</b></p>
             <p id="playlist-creator-name">Creator</p>
+            <p id="playlist-duration">Length</p>
             <p><button id="shuffleButton">Shuffle</button></p>
         </div>
         <section class="songs-list" id="songs-list">
           <div>
-            <img src="assets/img/song.png" />
-            <p><b>Song</b></p>
-            <p>Album</p>
-            <p>Artist name</p>
-          </div>
-          <div>
-            <img src="assets/img/song.png" />
-            <p><b>Song</b></p>
-            <p>Album</p>
-            <p>Artist name</p>
-          </div>
-          <div>
-            <img src="assets/img/song.png" />
-            <p><b>Song</b></p>
-            <p>Album</p>
-            <p>Artist name</p>
-          </div>
-          <div>
-            <img src="assets/img/song.png" />
-            <p><b>Song</b></p>
-            <p>Album</p>
-            <p>Artist name</p>
-          </div>
           <div>
             <img src="assets/img/song.png" />
             <p><b>Song</b></p>

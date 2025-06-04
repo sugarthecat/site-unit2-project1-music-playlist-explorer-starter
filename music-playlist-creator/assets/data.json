@@ -139,49 +139,114 @@
       "album": "From Bad To Worse (And Back Again)",
       "albumcover": "urbanstairs.jpg",
       "duration": "3:15"
+    },
+    {
+      "title": "HOT TO GO!",
+      "artist": "Chappel Roan",
+      "album": "The Rise And Fall Of A Midwest Princess",
+      "albumcover": "party.jpg",
+      "duration": "3:04"
+    },
+    {
+      "title": "HiiPowerr",
+      "artist": "Kendrick Lamar",
+      "album": "Section.80",
+      "albumcover": "campfire.jpg",
+      "duration": "4:39"
+    },
+    {
+      "title": "A.D.H.D",
+      "artist": "Kendrick Lamar",
+      "album": "Section.80",
+      "albumcover": "campfire.jpg",
+      "duration": "3:35"
+    },
+    {
+      "title": "Ab-Souls Outro (feat. Ab-Soul)",
+      "artist": "Kendrick Lamar",
+      "album": "Section.80",
+      "albumcover": "campfire.jpg",
+      "duration": "5:50"
+    },
+    {
+      "title": "SugarCrash!",
+      "artist": "ElyOtto",
+      "album": "SugarCrash!",
+      "albumcover": "baloons.jpg",
+      "duration": "1:20"
     }
   ],
   "playlists": [
     {
       "title": "Top Hits",
       "creator": "Pillpoard2",
-      "songs": ["Babydoll", "Brazil", "Chicago", "Anna Sun"]
+      "songs": ["Babydoll", "Brazil", "Chicago", "Anna Sun", "HOT TO GO!"],
+      "likes": 2192
     },
     {
       "title": "Songs that sound like names",
       "creator": "NameGuy17",
-      "songs": ["Analie", "Aubrey", "Anna Sun", "Natalie", "Katherine", "Becca"]
+      "songs": ["Analie", "Aubrey", "Anna Sun", "Natalie", "Katherine", "Becca"],
+      "likes": 0
     },
     {
       "title": "Location Songs",
       "creator": "WorldTraveler29",
-      "songs": ["Brazil", "Paris", "Chicago", "San Diego"]
+      "songs": ["Brazil", "Paris", "Chicago", "San Diego"],
+      "likes": 0
     },
     {
       "title": "Love Songs",
       "creator": "NameGuy17",
-      "songs": ["Anna Sun", "Grim Reaper", "Dragonfly Intoxication", "Analie"]
+      "songs": ["Anna Sun", "Grim Reaper", "Dragonfly Intoxication", "Analie"],
+      "likes": 1843
     },
     {
       "title": "Sad Love Songs",
       "creator": "EmoTeenager49",
-      "songs": ["San Diego", "Babydoll", "Lovers Rock"]
+      "songs": ["Lovers Rock", "San Diego", "Babydoll"],
+      "likes": 515
     },
     {
       "title": "Pretentious Indie Music",
       "creator": "EmoTeenager43",
-      "songs": ["Pretty Paper", "Grim Reaper", "Bukowski", "Parasite"]
+      "songs": [
+        "Pretty Paper",
+        "Grim Reaper",
+        "Bukowski",
+        "Parasite",
+        "Ab-Souls Outro (feat. Ab-Soul)"
+      ],
+      "likes": 302
     },
     {
       "title": "West Coast Alternative",
-      "creator": "PerformativePunk",
+      "creator": "P3rf0rmativePunk",
       "songs": [
         "Soda Pop Rock",
         "San Diego",
         "Katherine",
         "Troublemaker",
         "Babydoll"
-      ]
+      ],
+      "likes": 876
+    },
+    {
+      "title": "Short Songs",
+      "creator": "BusyM4n",
+      "songs": ["SugarCrash!", "Babydoll"],
+      "likes": 0
+    },
+    {
+      "title": "Long Songs",
+      "creator": "TimePass3r",
+      "songs": [
+        "Ab-Souls Outro (feat. Ab-Soul)",
+        "Anna Sun",
+        "HiiPowerr",
+        "Brazil"
+      ],
+      "likes": 0
     }
   ]
 }
