@@ -5,6 +5,7 @@ class Playlist {
     this.likes = likes;
     this.dateCreated = new Date();
     this.songs = [];
+    this.liked = false;
   }
   getDOMCard() {
     let ref = this;
@@ -20,6 +21,34 @@ class Playlist {
     let playlistCreator = document.createElement("p");
     playlistCreator.innerText = this.creator;
     mainBody.appendChild(playlistCreator);
+    let likeSection = document.createElement("p");
+    likeSection.className = "like-section"
+    let likeButton = document.createElement("span");
+    likeButton.className = "like-button"
+    likeButton.innerText = "♥"
+    if(this.liked){
+        likeButton.classList.add("liked")
+    }
+    let likeCounter = document.createElement("span");
+    likeCounter.innerText = this.likes
+    likeCounter.className = "like-counter"
+    likeButton.onclick = function(event){
+        event.stopPropagation();
+        if(ref.liked){
+            likeButton.classList.remove("liked")
+            ref.liked = false;
+            ref.likes--;
+            likeCounter.innerText = ref.likes
+        }else{
+            likeButton.classList.add("liked")
+            ref.liked = true;
+            ref.likes++;
+            likeCounter.innerText = ref.likes
+        }
+    }
+    likeSection.appendChild(likeButton)
+    likeSection.appendChild(likeCounter)
+    mainBody.appendChild(likeSection)
     mainBody.onclick = function () {
       ref.focusPlaylist();
     };

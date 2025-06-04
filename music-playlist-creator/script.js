@@ -12,7 +12,7 @@ function loadData(data) {
   songs = data.songs;
   for (let i = 0; i < data.playlists.length; i++) {
     let playlistData = data.playlists[i];
-    let playlist = new Playlist(playlistData.title, playlistData.creator);
+    let playlist = new Playlist(playlistData.title, playlistData.creator, playlistData.likes);
 
     for (let k = 0; k < playlistData.songs.length; k++) {
       for (let j = 0; j < songs.length; j++) {
