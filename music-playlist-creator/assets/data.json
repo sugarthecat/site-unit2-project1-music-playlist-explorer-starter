@@ -3,113 +3,185 @@
     {
       "title": "Natalie",
       "artist": "HUNNY",
-      "album": "Pain, Ache, Loving",
-      "albumcover": "song.png"
+      "album": "Pain / Ache / Loving",
+      "albumcover": "sky.jpg",
+      "duration": "3:08"
     },
     {
       "title": "Televised",
       "artist": "HUNNY",
       "album": "Windows I",
-      "albumcover": "song.png"
+      "albumcover": "oceanview.jpg",
+      "duration": "3:15"
     },
     {
       "title": "Dragonfly Intoxication",
       "artist": "Public Theatre",
       "album": "Otherside",
-      "albumcover": "song.png"
+      "albumcover": "urbanstairs.jpg",
+      "duration": "3:45"
     },
     {
       "title": "Grim Reaper",
       "artist": "Public Theatre",
       "album": "Otherside",
-      "albumcover": "song.png"
+      "albumcover": "urbanstairs.jpg",
+      "duration": "3:50"
     },
     {
       "title": "Anna Sun",
       "artist": "WALK THE MOON",
       "album": "Walk The Moon",
-      "albumcover": "song.png"
+      "albumcover": "fingerheart.jpg",
+      "duration": "5:21"
     },
     {
       "title": "Babydoll",
       "artist": "Dominic Fike",
-      "album": "Dont Forget About Me, Demos",
-      "albumcover": "song.png"
+      "album": "Don't Forget About Me, Demos",
+      "albumcover": "oceanview.jpg",
+      "duration": "1:38"
     },
     {
       "title": "San Diego",
       "artist": "The Cautious",
       "album": "Hottest Love, Coldest End",
-      "albumcover": "song.png"
+      "albumcover": "seagull.jpg",
+      "duration": "3:00"
     },
     {
       "title": "Brazil",
-      "artist": "Declan MacKenna",
+      "artist": "Declan McKenna",
       "album": "What Do You Think About The Car?",
-      "albumcover": "song.png"
+      "albumcover": "sky.jpg",
+      "duration": "4:12"
+    },
+    {
+      "title": "Becca",
+      "artist": "The Sukis",
+      "album": "Becca",
+      "albumcover": "sky.jpg",
+      "duration": "3:50"
     },
     {
       "title": "Paris",
       "artist": "Kenya Grace",
       "album": "Paris",
-      "albumcover": "song.png"
+      "albumcover": "woodsgirl.jpg",
+      "duration": "3:01"
     },
     {
       "title": "Chicago",
       "artist": "Michael Jackson",
       "album": "XSCAPE",
-      "albumcover": "song.png"
+      "albumcover": "fancylounge.jpg",
+      "duration": "4:06"
     },
     {
       "title": "Lovers Rock",
       "artist": "TV Girl",
       "album": "French Exit",
-      "albumcover": "song.png"
+      "albumcover": "woodsgirl.jpg",
+      "duration": "3:34"
     },
     {
       "title": "Bukowski",
       "artist": "1990nowhere",
       "album": "A Fever Called Living",
-      "albumcover": "song.png"
+      "albumcover": "sky.jpg",
+      "duration": "3:25"
     },
     {
       "title": "Parasite",
       "artist": "Armors",
       "album": "Collisions",
-      "albumcover": "song.png"
+      "albumcover": "bench.jpg",
+      "duration": "3:40"
+    },
+    {
+      "title": "Aubrey",
+      "artist": "Armors",
+      "album": "Collisions",
+      "albumcover": "bench.jpg",
+      "duration": "3:10"
     },
     {
       "title": "Pretty Paper",
       "artist": "Daniel Blair",
-      "album": "I Don't Like To Think A Lot About Tehse Kinds Of Things",
-      "albumcover": "song.png"
+      "album": "I Don't Like To Think A Lot About These Kinds Of Things",
+      "albumcover": "fancylounge.jpg",
+      "duration": "4:00"
+    },
+    {
+      "title": "Analie",
+      "artist": "Stolen Gin",
+      "album": "Something Sweet",
+      "albumcover": "rainbowsea.jpg",
+      "duration": "3:59"
+    },
+    {
+      "title": "Katherine",
+      "artist": "The Cautious",
+      "album": "Less Than You Bargained For",
+      "albumcover": "oceanview.jpg",
+      "duration": "3:30"
+    },
+    {
+      "title": "Troublemaker",
+      "artist": "Black Pontiac",
+      "album": "From Bad To Worse (And Back Again)",
+      "albumcover": "urbanstairs.jpg",
+      "duration": "3:20"
+    },
+    {
+      "title": "Soda Pop Rock",
+      "artist": "Black Pontiac",
+      "album": "From Bad To Worse (And Back Again)",
+      "albumcover": "urbanstairs.jpg",
+      "duration": "3:15"
     }
   ],
   "playlists": [
     {
+      "title": "Top Hits",
+      "creator": "Pillpoard2",
+      "songs": ["Babydoll", "Brazil", "Chicago", "Anna Sun"]
+    },
+    {
       "title": "Songs that sound like names",
       "creator": "NameGuy17",
-      "songs": ["Anna Sun", "Natalie"]
+      "songs": ["Analie", "Aubrey", "Anna Sun", "Natalie", "Katherine", "Becca"]
     },
     {
       "title": "Location Songs",
       "creator": "WorldTraveler29",
-      "songs": ["Brazil","Paris","Chicago","San Diego"]
+      "songs": ["Brazil", "Paris", "Chicago", "San Diego"]
     },
     {
       "title": "Love Songs",
       "creator": "NameGuy17",
-      "songs": ["Anna Sun","Grim Reaper", "Dragonfly Intoxication"]
+      "songs": ["Anna Sun", "Grim Reaper", "Dragonfly Intoxication", "Analie"]
     },
     {
       "title": "Sad Love Songs",
       "creator": "EmoTeenager49",
-      "songs": ["San Diego","Babydoll", "Lovers Rock"]
+      "songs": ["San Diego", "Babydoll", "Lovers Rock"]
     },
     {
       "title": "Pretentious Indie Music",
       "creator": "EmoTeenager43",
-      "songs": ["Grim Reaper", "Bukowski", "Parasite", "Pretty Paper"]
+      "songs": ["Pretty Paper", "Grim Reaper", "Bukowski", "Parasite"]
+    },
+    {
+      "title": "West Coast Alternative",
+      "creator": "PerformativePunk",
+      "songs": [
+        "Soda Pop Rock",
+        "San Diego",
+        "Katherine",
+        "Troublemaker",
+        "Babydoll"
+      ]
     }
   ]
 }

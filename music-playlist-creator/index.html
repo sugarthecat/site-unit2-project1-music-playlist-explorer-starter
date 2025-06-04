@@ -28,7 +28,6 @@
       class="modal-overlay"
       onclick="hideModalOverlay()"
       id="modal-overlay"
-      hidden
     >
       <div
         class="modal-content"
@@ -36,12 +35,12 @@
         onclick="modalContentClicked(event)"
       >
         <div class="playlist-info">
-          <img src="assets/img/playlist.png" />
-            <p><b>Song</b></p>
-            <p>Album</p>
-            <p>Artist name</p>
+          <img src="assets/img/playlist.png" id="playlist-cover"/>
+            <p><b id="playlist-name">Playlist</b></p>
+            <p id="playlist-creator-name">Creator</p>
+            <p><button id="shuffleButton">Shuffle</button></p>
         </div>
-        <section class="songs-list">
+        <section class="songs-list" id="songs-list">
           <div>
             <img src="assets/img/song.png" />
             <p><b>Song</b></p>
