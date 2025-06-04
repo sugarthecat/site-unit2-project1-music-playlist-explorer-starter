@@ -1,0 +1,115 @@
+{
+  "songs": [
+    {
+      "title": "Natalie",
+      "artist": "HUNNY",
+      "album": "Pain, Ache, Loving",
+      "albumcover": "song.png"
+    },
+    {
+      "title": "Televised",
+      "artist": "HUNNY",
+      "album": "Windows I",
+      "albumcover": "song.png"
+    },
+    {
+      "title": "Dragonfly Intoxication",
+      "artist": "Public Theatre",
+      "album": "Otherside",
+      "albumcover": "song.png"
+    },
+    {
+      "title": "Grim Reaper",
+      "artist": "Public Theatre",
+      "album": "Otherside",
+      "albumcover": "song.png"
+    },
+    {
+      "title": "Anna Sun",
+      "artist": "WALK THE MOON",
+      "album": "Walk The Moon",
+      "albumcover": "song.png"
+    },
+    {
+      "title": "Babydoll",
+      "artist": "Dominic Fike",
+      "album": "Dont Forget About Me, Demos",
+      "albumcover": "song.png"
+    },
+    {
+      "title": "San Diego",
+      "artist": "The Cautious",
+      "album": "Hottest Love, Coldest End",
+      "albumcover": "song.png"
+    },
+    {
+      "title": "Brazil",
+      "artist": "Declan MacKenna",
+      "album": "What Do You Think About The Car?",
+      "albumcover": "song.png"
+    },
+    {
+      "title": "Paris",
+      "artist": "Kenya Grace",
+      "album": "Paris",
+      "albumcover": "song.png"
+    },
+    {
+      "title": "Chicago",
+      "artist": "Michael Jackson",
+      "album": "XSCAPE",
+      "albumcover": "song.png"
+    },
+    {
+      "title": "Lovers Rock",
+      "artist": "TV Girl",
+      "album": "French Exit",
+      "albumcover": "song.png"
+    },
+    {
+      "title": "Bukowski",
+      "artist": "1990nowhere",
+      "album": "A Fever Called Living",
+      "albumcover": "song.png"
+    },
+    {
+      "title": "Parasite",
+      "artist": "Armors",
+      "album": "Collisions",
+      "albumcover": "song.png"
+    },
+    {
+      "title": "Pretty Paper",
+      "artist": "Daniel Blair",
+      "album": "I Don't Like To Think A Lot About Tehse Kinds Of Things",
+      "albumcover": "song.png"
+    }
+  ],
+  "playlists": [
+    {
+      "title": "Songs that sound like names",
+      "creator": "NameGuy17",
+      "songs": ["Anna Sun", "Natalie"]
+    },
+    {
+      "title": "Location Songs",
+      "creator": "WorldTraveler29",
+      "songs": ["Brazil","Paris","Chicago","San Diego"]
+    },
+    {
+      "title": "Love Songs",
+      "creator": "NameGuy17",
+      "songs": ["Anna Sun","Grim Reaper", "Dragonfly Intoxication"]
+    },
+    {
+      "title": "Sad Love Songs",
+      "creator": "EmoTeenager49",
+      "songs": ["San Diego","Babydoll", "Lovers Rock"]
+    },
+    {
+      "title": "Pretentious Indie Music",
+      "creator": "EmoTeenager43",
+      "songs": ["Grim Reaper", "Bukowski", "Parasite", "Pretty Paper"]
+    }
+  ]
+}
