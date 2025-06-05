@@ -4,6 +4,13 @@ body {
   padding: 0;
   background-color: #f8f8f8;
 }
+nav span{
+    color:lightblue;
+    font-weight: bolder;
+    padding-left:30px;
+    padding-right:30px;
+    cursor: pointer;
+}
 header,
 footer {
   padding: 40px;
@@ -18,24 +25,29 @@ footer {
 .song-title {
   font-weight: bolder;
 }
+.delete-button{
+    position:absolute;
+    top: 5px;
+    right:5px;
+}
 .like-section {
   position: absolute;
-  margin-bottom: 5px;
-  bottom: 0px;
+  bottom: 5px;
 }
-.like-button {
+
+.like-button, .delete-button {
   font-size: x-large;
   padding: 5px;
   border-radius: 20%;
   background-color: lightgray;
+  color: black;
   transition-duration: 500ms;
   margin-right: 10px;
 }
 .like-button.liked {
   background-color: rgb(255, 150, 140);
 }
-.like-button:hover {
-  color: black;
+.like-button:hover, .delete-button:hover {
   box-shadow: 8px 8px;
 }
 .playlist-card {

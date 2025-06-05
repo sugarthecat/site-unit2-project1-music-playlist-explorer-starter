@@ -49,6 +49,19 @@ class Playlist {
     likeSection.appendChild(likeButton)
     likeSection.appendChild(likeCounter)
     mainBody.appendChild(likeSection)
+    let deleteSection = document.createElement("span");
+    deleteSection.className = "delete-button"
+    deleteSection.innerText =  "✕"
+    deleteSection.onclick = function(event){
+        event.stopPropagation();
+        for(let i = 0; i<playlists.length; i++){
+            if(playlists[i] == ref){
+                playlists.splice(i,1);
+            }
+        }
+        refreshPlaylistGrid();
+    }
+    mainBody.appendChild(deleteSection)
     mainBody.onclick = function () {
       ref.focusPlaylist();
     };
