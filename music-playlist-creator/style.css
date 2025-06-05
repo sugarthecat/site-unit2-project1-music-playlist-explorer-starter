@@ -62,14 +62,15 @@ footer {
   box-shadow: 0px 0px;
   transition-duration: 500ms;
   outline: 8px solid gray;
-  width: 12%;
-  height: 18vw;
+  width: 240px;
+  height: 320px;
+  margin: 15px;
 }
 .playlist-card h3 {
   margin-top: 5px;
   margin-bottom: 5px;
 }
-.playlist-card p {
+.playlist-card p:not(.like-section, .delete-button) {
   margin-top: 5px;
   margin-bottom: 15px;
 }
@@ -172,18 +173,17 @@ button:hover {
   margin-right: 12px;
 }
 
-@media only screen and (max-width: 1200px) {
-  .playlist-card {
-    width: 20%;
-    height: 35vw;
-  }
+@media only screen and (max-width: 1000px) {
+    .playlist-card{
+        width: 210px;
+        height:280px;
+    }
 }
 @media only screen and (max-width: 800px) {
-  .playlist-card {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    box-shadow: 12px 12px;
-  }
+    .playlist-card{
+        width: 180px;
+        height:240px;
+    }
   .song-right-section {
     padding: 20px;
   }
@@ -193,13 +193,22 @@ button:hover {
     height: 40%;
   }
 }
-@media only screen and (max-width: 450px) {
-  .playlist-card {
-    width: 30%;
-    height: 60vw;
-  }
+@media only screen and (max-width: 500px) {
+    .playlist-card{
+        width: 150px;
+        height:200px;
+        padding: 3px;
+    }
+.like-section {
+  position: absolute;
+  bottom: 0px;
+  margin-bottom: 8px;
+}
   p {
-    font-size: small;
+    font-size: 10px;
+  }
+  h3{
+    font-size: 13px;
   }
 }
 @media only screen and (max-width: 400px) {
@@ -208,9 +217,5 @@ button:hover {
   }
   .song-right-section {
     padding: 10px;
-  }
-  .playlist-card {
-    width: 30%;
-    height: 70vw;
   }
 }
