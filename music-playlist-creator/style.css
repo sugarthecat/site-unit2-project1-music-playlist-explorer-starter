@@ -23,8 +23,6 @@ footer {
   margin-bottom: 5px;
   bottom: 0px;
 }
-.like-counter {
-}
 .like-button {
   font-size: x-large;
   padding: 5px;
@@ -165,7 +163,7 @@ button:hover {
 @media only screen and (max-width: 1200px) {
   .playlist-card {
     width: 20%;
-    height: 40vw
+    height: 35vw;
   }
 }
 @media only screen and (max-width: 800px) {
@@ -198,5 +196,9 @@ button:hover {
   }
   .song-right-section {
     padding: 10px;
+  }
+  .playlist-card {
+    width: 30%;
+    height: 70vw;
   }
 }
