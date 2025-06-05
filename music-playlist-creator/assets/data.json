@@ -197,7 +197,7 @@
       "likes": 0
     },
     {
-      "title": "Location Songs",
+      "title": "Place Songs",
       "creator": "WorldTraveler29",
       "songs": ["Brazil", "Paris", "Chicago", "San Diego"],
       "likes": 0
@@ -215,7 +215,7 @@
       "likes": 515
     },
     {
-      "title": "Pretentious Indie Music",
+      "title": "Indie Music",
       "creator": "EmoTeenager43",
       "songs": [
         "Pretty Paper",
@@ -239,7 +239,7 @@
       "likes": 876
     },
     {
-      "title": "Short Songs",
+      "title": "Brief Songs",
       "creator": "BusyM4n",
       "songs": ["SugarCrash!", "Babydoll", "Daughter of a Cop"],
       "likes": 0

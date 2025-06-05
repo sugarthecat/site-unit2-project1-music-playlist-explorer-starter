@@ -7,6 +7,7 @@ class Playlist {
     this.songs = [];
     this.liked = false;
   }
+  //gets the playlist card DOM element
   getDOMCard() {
     let ref = this;
 
@@ -67,9 +68,11 @@ class Playlist {
     };
     return mainBody;
   }
+  //gets the text, indicating the length of the playlist, both in time and songs.
   getLengthText(){
-    return `${Math.floor(this.getTotalLength()/60)}:${this.getTotalLength()%60}${this.getTotalLength()%60 <10 ? 0 : ""}, ${this.songs.length} songs`;
+    return `${Math.floor(this.getTotalLength()/60)}m ${this.getTotalLength()%60}${this.getTotalLength()%60 <10 ? 0 : ""}s (${this.songs.length} songs)`;
   }
+  //
   focusPlaylist() {
     document.getElementById("modal-overlay").style.display = "flex";
     document.getElementById("playlist-name").innerText = this.title;

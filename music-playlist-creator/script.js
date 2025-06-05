@@ -36,6 +36,8 @@ fetch("assets/data.json")
 hideModalOverlay();
 
 function sortPlaylists() {
+  //clear search criteria
+  document.getElementById("search-input").value = "";
   let sortCriteria = document.getElementById("playlist-sort-type").value;
   //sort playlists - bubble sort
   let sorted = false;
@@ -86,5 +88,36 @@ function refreshPlaylistGrid() {
     document
       .getElementById("playlist-cards")
       .appendChild(playlists[i].getDOMCard());
+  }
+}
+function searchBarKeyPressed(event){
+    if(event.key === "Enter"){
+        searchPlaylists();
+    }
+}
+function searchPlaylists() {
+  document.getElementById("playlist-cards").innerHTML = "";
+  let queryParts = document.getElementById("search-input").value.split(" ");
+  for (let i = 0; i < playlists.length; i++) {
+    let match = true;
+    for (let j = 0; j < queryParts.length; j++) {
+      //find valid places to find the query part
+      if (playlists[i].title.toLowerCase().includes(queryParts[j].toLowerCase())) {
+        //title is valid
+        continue;
+      }
+      if (playlists[i].creator.toLowerCase().includes(queryParts[j].toLowerCase())) {
+        //creator is valid
+        continue;
+      }
+      //otherwise, invalid
+      match = false;
+      break;
+    }
+    if (match) {
+      document
+        .getElementById("playlist-cards")
+        .appendChild(playlists[i].getDOMCard());
+    }
   }
 }
