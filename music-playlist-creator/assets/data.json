@@ -85,6 +85,13 @@
       "duration": "3:34"
     },
     {
+      "title": "Daughter of a Cop",
+      "artist": "TV Girl",
+      "album": "French Exit",
+      "albumcover": "woodsgirl.jpg",
+      "duration": "2:33"
+    },
+    {
       "title": "Bukowski",
       "artist": "1990nowhere",
       "album": "A Fever Called Living",
@@ -234,7 +241,7 @@
     {
       "title": "Short Songs",
       "creator": "BusyM4n",
-      "songs": ["SugarCrash!", "Babydoll"],
+      "songs": ["SugarCrash!", "Babydoll", "Daughter of a Cop"],
       "likes": 0
     },
     {

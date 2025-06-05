@@ -67,10 +67,13 @@ class Playlist {
     };
     return mainBody;
   }
+  getLengthText(){
+    return `${Math.floor(this.getTotalLength()/60)}:${this.getTotalLength()%60}${this.getTotalLength()%60 <10 ? 0 : ""}, ${this.songs.length} songs`;
+  }
   focusPlaylist() {
     document.getElementById("modal-overlay").style.display = "flex";
     document.getElementById("playlist-name").innerText = this.title;
-    document.getElementById("playlist-duration").innerText = `${Math.floor(this.getTotalLength()/60)}:${this.getTotalLength()%60}${this.getTotalLength()%60 <10 ? 0 : ""}, ${this.songs.length} songs`;
+    document.getElementById("playlist-duration").innerText = this.getLengthText();
     document.getElementById(
       "playlist-creator-name"
     ).innerText = `Created by ${this.creator}`;

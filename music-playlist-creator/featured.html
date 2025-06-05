@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Music Playlist Explorer</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+
+    <link rel="stylesheet" href="style.css" />
+    <script src="Playlist.js"></script>
+    <script src="featured.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>Music Playlist Explorer</h1>
+      <p>By T.J. Nickerson</p>
+      <nav>
+        <span><a href="index.html">All</a></span>
+        |
+        <span>Featured</span>
+      </nav>
+    </header>
+
+    <main>
+      <div id="feature-page">
+        <div id="playlist-info">
+          <img src="assets/img/playlist.png" id="playlist-cover"/>
+          <h1 id="playlist-name">Playlist Name</h1>
+          <p id="playlist-creator">Playlist Creator</p>
+          <p id="playlist-length">Length</p>
+        </div>
+        <div id="songs-list" class="songs-list"></div>
+      </div>
+    </main>
+
+    <footer>
+      <!-- Your footer content here -->
+    </footer>
+  </body>
+</html>

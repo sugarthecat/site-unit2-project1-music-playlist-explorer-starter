@@ -13,6 +13,10 @@
     <header>
       <h1>Music Playlist Explorer</h1>
       <p>By T.J. Nickerson</p>
+      <nav>
+        <span>All</span>|
+        <span><a href="featured.html">Featured</a></span>
+      </nav>
       <p>Sort By <select onchange="sortPlaylists()" id="playlist-sort-type">
         <option value="a2z">Alphabetical (A-Z)</option>
         <option value="z2a">Alphabetical (Z-A)</option>
@@ -20,10 +24,6 @@
         <option value="likes">Likes</option>
         <option value="songcount">Song Count</option>
       </select></p>
-      <nav>
-        <span><a onclick="selectFeatured()">Featured</a></span>|
-        <span><a onclick="selectAll()" class="selected-menu">All</a></span>
-      </nav>
     </header>
 
     <main>

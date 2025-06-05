@@ -4,12 +4,41 @@ body {
   padding: 0;
   background-color: #f8f8f8;
 }
+#feature-page{
+    width:100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+#feature-page .songs-list > div {
+  padding: 8px;
+  height: 10vh;
+  display: flex;
+}
+#feature-page div.songs-list{
+    height: 100%
+}
+div#playlist-info{
+    padding: 20px;
+    width: 40%;
+}
+div#playlist-info img{
+    border-radius: 5%;
+    width: 60%;
+    display: block;
+    margin:auto;
+}
+div#song-list{
+    width: 40%;
+}
 nav span{
-    color:lightblue;
-    font-weight: bolder;
-    padding-left:30px;
-    padding-right:30px;
-    cursor: pointer;
+  font-weight: bolder;
+  padding-left: 30px;
+  padding-right: 30px;
+  cursor: pointer;
+}
+nav span a{
+  color: lightblue;
 }
 header,
 footer {
@@ -25,17 +54,18 @@ footer {
 .song-title {
   font-weight: bolder;
 }
-.delete-button{
-    position:absolute;
-    top: 5px;
-    right:5px;
+.delete-button {
+  position: absolute;
+  top: 5px;
+  right: 5px;
 }
 .like-section {
   position: absolute;
   bottom: 5px;
 }
 
-.like-button, .delete-button {
+.like-button,
+.delete-button {
   font-size: x-large;
   padding: 5px;
   border-radius: 20%;
@@ -47,7 +77,8 @@ footer {
 .like-button.liked {
   background-color: rgb(255, 150, 140);
 }
-.like-button:hover, .delete-button:hover {
+.like-button:hover,
+.delete-button:hover {
   box-shadow: 8px 8px;
 }
 .playlist-card {
@@ -143,6 +174,7 @@ button:hover {
 .songs-list > div {
   padding: 8px;
   height: 25%;
+  width: 100%;
   display: flex;
 }
 .song-right-section {
@@ -157,7 +189,7 @@ button:hover {
   margin-bottom: 0px;
 }
 .songs-list div img {
-  height: 100%;
+    height: 100%;
   border: 5%;
   border-radius: 8%;
   margin-right: 12px;
@@ -174,16 +206,16 @@ button:hover {
 }
 
 @media only screen and (max-width: 1000px) {
-    .playlist-card{
-        width: 210px;
-        height:280px;
-    }
+  .playlist-card {
+    width: 210px;
+    height: 280px;
+  }
 }
 @media only screen and (max-width: 800px) {
-    .playlist-card{
-        width: 180px;
-        height:240px;
-    }
+  .playlist-card {
+    width: 180px;
+    height: 240px;
+  }
   .song-right-section {
     padding: 20px;
   }
@@ -194,20 +226,20 @@ button:hover {
   }
 }
 @media only screen and (max-width: 500px) {
-    .playlist-card{
-        width: 150px;
-        height:200px;
-        padding: 3px;
-    }
-.like-section {
-  position: absolute;
-  bottom: 0px;
-  margin-bottom: 8px;
-}
+  .playlist-card {
+    width: 150px;
+    height: 200px;
+    padding: 3px;
+  }
+  .like-section {
+    position: absolute;
+    bottom: 0px;
+    margin-bottom: 8px;
+  }
   p {
     font-size: 10px;
   }
-  h3{
+  h3 {
     font-size: 13px;
   }
 }
