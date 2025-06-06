@@ -179,6 +179,13 @@ button:not(.card-button) {
 button:hover:not(.card-button) {
   background-color: lightblue;
 }
+#add-new-song-section p {
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+#add-new-song-section p input {
+  padding: 3px;
+}
 .songs-list {
   display: flex;
   flex-direction: column;

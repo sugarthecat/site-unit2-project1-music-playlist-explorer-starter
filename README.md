@@ -78,7 +78,7 @@ Deployed Application (**required**): [Music Playlist Explorer Deployed Site](htt
   - [x] Using a form, users can input playlist:
     - [x] Name
     - [x] Author
-    - [ ] Cover image
+    - [x] Cover image
     - [ ] Add one or more songs to the playlist, specifying the song's:
       - [ ] Title
       - [ ] Artist

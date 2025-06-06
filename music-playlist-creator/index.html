@@ -20,7 +20,7 @@
         </p>
         <p>
           Sort By
-          <select onchange="sortPlaylists()" id="playlist-sort-type">
+          <select onchange="refreshPlaylistGrid()" id="playlist-sort-type">
             <option value="a2z">Alphabetical (A-Z)</option>
             <option value="z2a">Alphabetical (Z-A)</option>
             <option value="len">Length</option>
@@ -61,6 +61,14 @@
           <p id="playlist-duration">Length</p>
           <p><button id="shuffle-button">Shuffle</button></p>
           <button id="edit-button" class="edit-button card-button">✎</button>
+          <section id="add-new-song-section" hidden>
+            <p>Add New Song</p>
+            <p>Title: <input id="add-song-title"/></p>
+            <p>Artist: <input id="add-song-artist"/></p>
+            <p>Album: <input id="add-song-album"/></p>
+            <p>Duration:<input id="add-song-duration"/></p>
+            <p><button id="add-song-button">Add Song</button></p>
+          </section>
         </div>
         <section class="songs-list" id="songs-list">
           <div>
