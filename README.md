@@ -73,25 +73,25 @@ Deployed Application (**required**): [Music Playlist Explorer Deployed Site](htt
 
 #### STRETCH FEATURES
 
-- [ ] **Add New Playlists**
+- [x] **Add New Playlists**
   - [x] Allow users to create new playlists.
   - [x] Using a form, users can input playlist:
     - [x] Name
     - [x] Author
     - [x] Cover image
-    - [ ] Add one or more songs to the playlist, specifying the song's:
-      - [ ] Title
-      - [ ] Artist
+    - [x] Add one or more songs to the playlist, specifying the song's:
+      - [x] Title
+      - [x] Artist
   - [x] The resulting playlist should display in the grid view.
   - [x] **VIDEO WALKTHROUGH SPECIAL INSTRUCTIONS:** For ease of grading, please show yourself adding at least two songs to the playlist. 
 
-- [ ] **Edit Existing Playlists**
+- [x] **Edit Existing Playlists**
   - [x] Enable users to modify the details of existing playlists.
   - [x] Add an edit button to each playlist tile.
-  - [ ] Users can update the playlist:
+  - [x] Users can update the playlist:
     - [x] Name
     - [x] Author
-    - [ ] Songs
+    - [x] Songs
   - [x] The playlist grid view and playlist detail modal should update to display any changes (see Required Features, Criterion 1 & 2).
   - [x] **VIDEO WALKTHROUGH SPECIAL INSTRUCTIONS:** For ease of grading, please show yourself:
     - [x] Editing all of a playlist's features (name, creator, AND songs)
@@ -130,9 +130,11 @@ Deployed Application (**required**): [Music Playlist Explorer Deployed Site](htt
 
 ### Walkthrough Video
 
-`TODO://` Add the embedded URL code to your animated app walkthrough below, `ADD_EMBEDDED_CODE_HERE`. Make sure the video actually renders and is playable when viewing this README. Ensure your walkthrough showcases the presence and/or functionality of all features you implemented above (check them off as you film!). Pay attention to any **VIDEO WALKTHROUGH SPECIAL INSTRUCTIONS** checkboxes listed above to ensure graders see the full functionality of your website! (🚫 Remove this paragraph after adding walkthrough video)
-
 `ADD_EMBEDDED_CODE_HERE`
+<video width="320" height="240" controls>
+  <source src="demo.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
 ### Reflection
 
@@ -146,7 +148,7 @@ I'm happy where I am, and I think I'd spend the extra time working on my capston
 
 * Reflect on your project demo, what went well? Were there things that maybe didn't go as planned? Did you notice something that your peer did that you would like to try next time?
 
-Add your response here
+It went well! It was quite a 
 
 ### Open-source libraries used
 
@@ -154,4 +156,4 @@ Add your response here
 
 ### Shout out
 
-Give a shout out to somebody from your cohort that especially helped you during your project. This can be a fellow peer, instructor, TA, mentor, etc.
+Bob was great! He had good feedback on my design, and pointed me in the right direction :)
