@@ -111,20 +111,21 @@ class Playlist {
     if (this.editing) {
       //save edits
       this.title = document.getElementById("playlist-name").children[0].value;
-      document.getElementById("playlist-name").innerText = this.title;
       this.creator = document.getElementById(
         "playlist-creator-name"
       ).children[0].value;
       document.getElementById(
         "playlist-creator-name"
       ).innerText = `Created by ${this.creator}`;
-      document.getElementById("edit-button").innerText = "✏️";
-    document.getElementById("shuffle-button").hidden = false;
+      //make
+      this.focusPlaylist();
+      document.getElementById("shuffle-button").hidden = false;
       //update playlists
-      if(!playlists.includes(this)){
+      if (!playlists.includes(this)) {
         playlists.push(this);
       }
       refreshPlaylistGrid();
+      this.editing = false;
     } else {
       document.getElementById("playlist-name").innerHTML = "<input/>";
       document.getElementById("playlist-name").children[0].value = this.title;
@@ -134,9 +135,9 @@ class Playlist {
       document.getElementById("playlist-creator-name").children[0].value =
         this.creator;
       document.getElementById("edit-button").innerText = "💾";
-    document.getElementById("shuffle-button").hidden = true;
+      document.getElementById("shuffle-button").hidden = true;
+      this.editing = true;
     }
-    this.editing = !this.editing;
   }
   getPlaylistCoverImage() {
     if (this.songs.length == 0) {
