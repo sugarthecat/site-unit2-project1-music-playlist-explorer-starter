@@ -81,12 +81,12 @@ function sortPlaylists() {
   }
   refreshPlaylistGrid();
 }
-function searchBarKeyPressed(event){
-    if(event.key === "Enter"){
-        refreshPlaylistGrid();
-    }
+function searchBarKeyPressed(event) {
+  if (event.key === "Enter") {
+    refreshPlaylistGrid();
+  }
 }
-function clearSearch(){
+function clearSearch() {
   document.getElementById("search-input").value = "";
   refreshPlaylistGrid();
 }
@@ -97,11 +97,15 @@ function refreshPlaylistGrid() {
     let match = true;
     for (let j = 0; j < queryParts.length; j++) {
       //find valid places to find the query part
-      if (playlists[i].title.toLowerCase().includes(queryParts[j].toLowerCase())) {
+      if (
+        playlists[i].title.toLowerCase().includes(queryParts[j].toLowerCase())
+      ) {
         //title is valid
         continue;
       }
-      if (playlists[i].creator.toLowerCase().includes(queryParts[j].toLowerCase())) {
+      if (
+        playlists[i].creator.toLowerCase().includes(queryParts[j].toLowerCase())
+      ) {
         //creator is valid
         continue;
       }
@@ -115,4 +119,10 @@ function refreshPlaylistGrid() {
         .appendChild(playlists[i].getDOMCard());
     }
   }
+}
+
+function addNewPlaylist(){
+  let newPlaylist = new Playlist("","")
+  newPlaylist.focusPlaylist();
+  newPlaylist.toggleEdit();
 }

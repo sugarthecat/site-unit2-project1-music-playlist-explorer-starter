@@ -15,7 +15,7 @@ input {
 }
 #feature-page .songs-list > div {
   padding: 8px;
-  height: 10vh;
+  height: 10vmin;
   display: flex;
 }
 #feature-page div.songs-list {

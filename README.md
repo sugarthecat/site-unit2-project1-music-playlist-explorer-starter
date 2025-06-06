@@ -4,7 +4,7 @@ Submitted by: **NAME**
 
 Estimated time spent: **#** hours spent in total
 
-Deployed Application (**required**): [Music Playlist Explorer Deployed Site](ADD_LINK_HERE)
+Deployed Application (**required**): [Music Playlist Explorer Deployed Site](https://site-unit2-project1-music-playlist-8yn5.onrender.com/)
 
 ### Application Features
 
@@ -74,16 +74,16 @@ Deployed Application (**required**): [Music Playlist Explorer Deployed Site](ADD
 #### STRETCH FEATURES
 
 - [ ] **Add New Playlists**
-  - [ ] Allow users to create new playlists.
-  - [ ] Using a form, users can input playlist:
-    - [ ] Name
-    - [ ] Author
+  - [x] Allow users to create new playlists.
+  - [x] Using a form, users can input playlist:
+    - [x] Name
+    - [x] Author
     - [ ] Cover image
     - [ ] Add one or more songs to the playlist, specifying the song's:
       - [ ] Title
       - [ ] Artist
-  - [ ] The resulting playlist should display in the grid view.
-  - [ ] **VIDEO WALKTHROUGH SPECIAL INSTRUCTIONS:** For ease of grading, please show yourself adding at least two songs to the playlist. 
+  - [x] The resulting playlist should display in the grid view.
+  - [x] **VIDEO WALKTHROUGH SPECIAL INSTRUCTIONS:** For ease of grading, please show yourself adding at least two songs to the playlist. 
 
 - [ ] **Edit Existing Playlists**
   - [x] Enable users to modify the details of existing playlists.

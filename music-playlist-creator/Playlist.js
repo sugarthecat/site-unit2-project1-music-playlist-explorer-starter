@@ -7,6 +7,7 @@ class Playlist {
     this.songs = [];
     this.liked = false;
     this.editing = false;
+    this.isNewPlaylist = false;
   }
   //gets the playlist card DOM element
   getDOMCard() {
@@ -120,6 +121,9 @@ class Playlist {
       document.getElementById("edit-button").innerText = "✏️";
     document.getElementById("shuffle-button").hidden = false;
       //update playlists
+      if(!playlists.includes(this)){
+        playlists.push(this);
+      }
       refreshPlaylistGrid();
     } else {
       document.getElementById("playlist-name").innerHTML = "<input/>";
