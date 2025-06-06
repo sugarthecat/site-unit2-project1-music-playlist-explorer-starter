@@ -127,6 +127,17 @@ class Playlist {
       refreshPlaylistGrid();
       this.editing = false;
     } else {
+      //fix song order
+    document.getElementById("songs-list").innerHTML = "";
+      for (let i = 0; i < this.songs.length; i++) {
+        document
+          .getElementById("songs-list")
+          .appendChild(this.getSongCard(this.songs[i]));
+      }
+      let deleteButtons = document.getElementsByClassName('song-delete-button');
+      for(let i = 0; i<deleteButtons.length; i++){
+        deleteButtons[i].hidden = false;
+      }
       document.getElementById("playlist-name").innerHTML = "<input/>";
       document.getElementById("playlist-name").children[0].value = this.title;
       document.getElementById(
@@ -180,6 +191,19 @@ class Playlist {
     songDuration.innerText = song.duration;
     rightSection.appendChild(songDuration);
     rightSection.className = "song-right-section";
+    //delete button
+    let deleteButton = document.createElement("button");
+    deleteButton.className = "delete-button card-button song-delete-button";
+    deleteButton.innerText = "✕";
+    deleteButton.hidden = true;
+    let ref = this
+    deleteButton.onclick = function(event){
+      //delete song element
+      card.remove()
+      //delete song from playlist
+      ref.songs.splice(ref.songs.indexOf(song),1)
+    }
+    card.appendChild(deleteButton);
     card.appendChild(rightSection);
     return card;
   }
