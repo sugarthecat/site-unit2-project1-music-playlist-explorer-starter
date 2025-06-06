@@ -30,10 +30,11 @@
         </p>
       </nav>
       <p class="search-item">
-        <input
+        <button onclick="clearSearch()">Clear</button
+        ><input
           onkeypress="searchBarKeyPressed(event)"
           id="search-input"
-        /><button onclick="searchPlaylists()">Search</button>
+        /><button onclick="refreshPlaylistGrid()">Search</button>
       </p>
     </header>
 
@@ -53,7 +54,8 @@
         <div class="playlist-info">
           <img src="assets/img/playlist.png" id="playlist-cover" />
           <p>
-          <b id="playlist-name">Playlist</b></p>
+            <b id="playlist-name">Playlist</b>
+          </p>
           <p id="playlist-creator-name">Creator</p>
           <p id="playlist-duration">Length</p>
           <p><button id="shuffle-button">Shuffle</button></p>

@@ -37,7 +37,6 @@ hideModalOverlay();
 
 function sortPlaylists() {
   //clear search criteria
-  document.getElementById("search-input").value = "";
   let sortCriteria = document.getElementById("playlist-sort-type").value;
   //sort playlists - bubble sort
   let sorted = false;
@@ -82,20 +81,16 @@ function sortPlaylists() {
   }
   refreshPlaylistGrid();
 }
-function refreshPlaylistGrid() {
-  document.getElementById("playlist-cards").innerHTML = "";
-  for (let i = 0; i < playlists.length; i++) {
-    document
-      .getElementById("playlist-cards")
-      .appendChild(playlists[i].getDOMCard());
-  }
-}
 function searchBarKeyPressed(event){
     if(event.key === "Enter"){
-        searchPlaylists();
+        refreshPlaylistGrid();
     }
 }
-function searchPlaylists() {
+function clearSearch(){
+  document.getElementById("search-input").value = "";
+  refreshPlaylistGrid();
+}
+function refreshPlaylistGrid() {
   document.getElementById("playlist-cards").innerHTML = "";
   let queryParts = document.getElementById("search-input").value.split(" ");
   for (let i = 0; i < playlists.length; i++) {
