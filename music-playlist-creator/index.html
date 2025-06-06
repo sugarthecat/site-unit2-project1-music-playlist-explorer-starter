@@ -42,20 +42,22 @@
     </main>
 
     <footer>
-      <!-- Your footer content here -->
+      <p>Assigned by CodePath</p>
     </footer>
     <div class="modal-overlay" onclick="hideModalOverlay()" id="modal-overlay">
       <div
         class="modal-content"
-        id="modal-content"
+        id="modal-content-playlist"
         onclick="modalContentClicked(event)"
       >
         <div class="playlist-info">
           <img src="assets/img/playlist.png" id="playlist-cover" />
-          <p><b id="playlist-name">Playlist</b></p>
+          <p>
+          <b id="playlist-name">Playlist</b></p>
           <p id="playlist-creator-name">Creator</p>
           <p id="playlist-duration">Length</p>
-          <p><button id="shuffleButton">Shuffle</button></p>
+          <p><button id="shuffle-button">Shuffle</button></p>
+          <button id="edit-button" class="edit-button card-button">✎</button>
         </div>
         <section class="songs-list" id="songs-list">
           <div>

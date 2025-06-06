@@ -6,6 +6,7 @@ class Playlist {
     this.dateCreated = new Date();
     this.songs = [];
     this.liked = false;
+    this.editing = false;
   }
   //gets the playlist card DOM element
   getDOMCard() {
@@ -13,6 +14,7 @@ class Playlist {
 
     let mainBody = document.createElement("div");
     mainBody.className = "playlist-card";
+    //setup playlist cover
     let playlistCover = document.createElement("img");
     playlistCover.src = this.getPlaylistCoverImage();
     mainBody.appendChild(playlistCover);
@@ -22,61 +24,66 @@ class Playlist {
     let playlistCreator = document.createElement("p");
     playlistCreator.innerText = this.creator;
     mainBody.appendChild(playlistCreator);
+    //add like button
     let likeSection = document.createElement("p");
-    likeSection.className = "like-section"
-    let likeButton = document.createElement("span");
-    likeButton.className = "like-button"
-    likeButton.innerText = "♥"
-    if(this.liked){
-        likeButton.classList.add("liked")
+    likeSection.className = "like-section";
+    let likeButton = document.createElement("button");
+    likeButton.className = "like-button card-button";
+    likeButton.innerText = "♥";
+    if (this.liked) {
+      likeButton.classList.add("liked");
     }
     let likeCounter = document.createElement("span");
-    likeCounter.innerText = this.likes
-    likeCounter.className = "like-counter"
-    likeButton.onclick = function(event){
-        event.stopPropagation();
-        if(ref.liked){
-            likeButton.classList.remove("liked")
-            ref.liked = false;
-            ref.likes--;
-            likeCounter.innerText = ref.likes
-        }else{
-            likeButton.classList.add("liked")
-            ref.liked = true;
-            ref.likes++;
-            likeCounter.innerText = ref.likes
+    likeCounter.innerText = this.likes;
+    likeCounter.className = "like-counter";
+    likeButton.onclick = function (event) {
+      event.stopPropagation();
+      if (ref.liked) {
+        likeButton.classList.remove("liked");
+        ref.liked = false;
+        ref.likes--;
+        likeCounter.innerText = ref.likes;
+      } else {
+        likeButton.classList.add("liked");
+        ref.liked = true;
+        ref.likes++;
+        likeCounter.innerText = ref.likes;
+      }
+    };
+    likeSection.appendChild(likeButton);
+    likeSection.appendChild(likeCounter);
+    mainBody.appendChild(likeSection);
+    //add delete button
+    let deleteSection = document.createElement("button");
+    deleteSection.className = "delete-button card-button";
+    deleteSection.innerText = "✕";
+    deleteSection.onclick = function (event) {
+      event.stopPropagation();
+      for (let i = 0; i < playlists.length; i++) {
+        if (playlists[i] == ref) {
+          playlists.splice(i, 1);
         }
-    }
-    likeSection.appendChild(likeButton)
-    likeSection.appendChild(likeCounter)
-    mainBody.appendChild(likeSection)
-    let deleteSection = document.createElement("span");
-    deleteSection.className = "delete-button"
-    deleteSection.innerText =  "✕"
-    deleteSection.onclick = function(event){
-        event.stopPropagation();
-        for(let i = 0; i<playlists.length; i++){
-            if(playlists[i] == ref){
-                playlists.splice(i,1);
-            }
-        }
-        refreshPlaylistGrid();
-    }
-    mainBody.appendChild(deleteSection)
+      }
+      refreshPlaylistGrid();
+    };
+    mainBody.appendChild(deleteSection);
     mainBody.onclick = function () {
       ref.focusPlaylist();
     };
     return mainBody;
   }
   //gets the text, indicating the length of the playlist, both in time and songs.
-  getLengthText(){
-    return `${Math.floor(this.getTotalLength()/60)}m ${this.getTotalLength()%60}${this.getTotalLength()%60 <10 ? 0 : ""}s (${this.songs.length} songs)`;
+  getLengthText() {
+    return `${Math.floor(this.getTotalLength() / 60)}m ${
+      this.getTotalLength() % 60
+    }${this.getTotalLength() % 60 < 10 ? 0 : ""}s (${this.songs.length} songs)`;
   }
   //
   focusPlaylist() {
     document.getElementById("modal-overlay").style.display = "flex";
     document.getElementById("playlist-name").innerText = this.title;
-    document.getElementById("playlist-duration").innerText = this.getLengthText();
+    document.getElementById("playlist-duration").innerText =
+      this.getLengthText();
     document.getElementById(
       "playlist-creator-name"
     ).innerText = `Created by ${this.creator}`;
@@ -89,9 +96,43 @@ class Playlist {
     document.getElementById("playlist-cover").src =
       this.getPlaylistCoverImage();
     let ref = this;
-    document.getElementById("shuffleButton").onclick = function () {
+    document.getElementById("shuffle-button").hidden = false;
+    document.getElementById("shuffle-button").onclick = function () {
       ref.shuffleSongs();
     };
+    this.editing = false;
+    document.getElementById("edit-button").innerText = "✏️";
+    document.getElementById("edit-button").onclick = function (event) {
+      ref.toggleEdit();
+    };
+  }
+  toggleEdit() {
+    if (this.editing) {
+      //save edits
+      this.title = document.getElementById("playlist-name").children[0].value;
+      document.getElementById("playlist-name").innerText = this.title;
+      this.creator = document.getElementById(
+        "playlist-creator-name"
+      ).children[0].value;
+      document.getElementById(
+        "playlist-creator-name"
+      ).innerText = `Created by ${this.creator}`;
+      document.getElementById("edit-button").innerText = "✏️";
+    document.getElementById("shuffle-button").hidden = false;
+      //update playlists
+      refreshPlaylistGrid();
+    } else {
+      document.getElementById("playlist-name").innerHTML = "<input/>";
+      document.getElementById("playlist-name").children[0].value = this.title;
+      document.getElementById(
+        "playlist-creator-name"
+      ).innerHTML = `Created by <input/>`;
+      document.getElementById("playlist-creator-name").children[0].value =
+        this.creator;
+      document.getElementById("edit-button").innerText = "💾";
+    document.getElementById("shuffle-button").hidden = true;
+    }
+    this.editing = !this.editing;
   }
   getPlaylistCoverImage() {
     if (this.songs.length == 0) {
@@ -100,14 +141,14 @@ class Playlist {
       return `assets/img/${this.songs[0].albumcover}`;
     }
   }
-  getTotalLength(){
+  getTotalLength() {
     let secLength = 0;
-    for(let i = 0; i<this.songs.length; i++){
-        let durationParts = this.songs[i].duration.split(":");
-        secLength += parseInt(durationParts[0])*60
-        secLength += parseInt(durationParts[1])
+    for (let i = 0; i < this.songs.length; i++) {
+      let durationParts = this.songs[i].duration.split(":");
+      secLength += parseInt(durationParts[0]) * 60;
+      secLength += parseInt(durationParts[1]);
     }
-    return secLength
+    return secLength;
   }
   getSongCard(song) {
     let card = document.createElement("div");
@@ -132,8 +173,8 @@ class Playlist {
     let rightSection = document.createElement("div");
     let songDuration = document.createElement("p");
     songDuration.innerText = song.duration;
-    rightSection.appendChild(songDuration)
-    rightSection.className = "song-right-section"
+    rightSection.appendChild(songDuration);
+    rightSection.className = "song-right-section";
     card.appendChild(rightSection);
     return card;
   }

@@ -71,8 +71,13 @@ footer {
   bottom: 5px;
 }
 
-.like-button,
-.delete-button {
+#edit-button{
+  position:absolute;
+  top:3%;
+  right:2%;
+}
+
+.card-button{
   font-size: x-large;
   padding: 5px;
   border-radius: 20%;
@@ -80,6 +85,8 @@ footer {
   color: black;
   transition-duration: 500ms;
   margin-right: 5x;
+  outline: none;
+  border: none;
 }
 .like-button{
     margin-right: 10px;
@@ -87,8 +94,7 @@ footer {
 .like-button.liked {
   background-color: rgb(255, 150, 140);
 }
-.like-button:hover,
-.delete-button:hover {
+.card-button:hover {
   box-shadow: 6px 6px;
 }
 .playlist-card {
@@ -151,6 +157,7 @@ select {
   align-items: center;
 }
 .modal-content {
+  position: relative;
   background-color: white;
   width: 90vmin;
   border-radius: 5%;
@@ -160,7 +167,7 @@ select {
 #playlist-name {
   font-size: larger;
 }
-button {
+button:not(.card-button) {
   padding: 12px;
   background-color: rgb(150, 180, 200);
   color: white;
@@ -169,7 +176,7 @@ button {
   border: none;
   transition: background-color 500ms;
 }
-button:hover {
+button:hover:not(.card-button) {
   background-color: lightblue;
 }
 .songs-list {
