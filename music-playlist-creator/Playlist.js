@@ -142,6 +142,7 @@ class Playlist {
   toggleEdit() {
     if (this.editing) {
       //save edits
+      this.focusSongList();
       this.title = document.getElementById("playlist-name").children[0].value;
       this.creator = document.getElementById(
         "playlist-creator-name"
